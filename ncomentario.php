@@ -69,22 +69,39 @@
 <!DOCTYPE HTML>
 <META CHARSET="UTF-8">
 <html>
-	<title>Nuevo Comentario | Blog</title>
-	<a href="index.php">Pagina principal</a>
-		<form action="ncomentario.php" method="POST" name="comentario2">
-			<table width=80% align="center">
-				<?php 
-					 echo "<tr><td align='center'><h3>".$tema."</h3></td></tr>
-				<tr><td><hr></td></tr>
-				<tr><td>".$contenidotema."</td></tr>				
-				<tr><td><hr></td></tr>";
-				 ?>
-				<tr><td><i>Añade un nuevo comentario</i></td></tr>
-				<tr><td><input type="hidden" name="iddecomentario" value="<?php echo $iddecomentario; ?>"></td></tr>
-				<tr><td><input type="hidden" name="idtema" value="<?php echo $_GET['ncomentario']; ?>"></td></tr>
-				<tr><td><textarea name="contenido" id="contenido" cols="70" rows="3" placeholder="Presiona para insertar tu texto o contenido"><?php echo $contenido; ?></textarea></td></tr>
-				<tr><td align="center"><input type="submit" value="Comentar"></td></tr>
-			</table>
-		</form>
+	<head>
+		<title>Nuevo Comentario | Blog</title>
+		<!-- Bootstrap -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<a href="index.php">Pagina principal</a>
+			<form action="ncomentario.php" method="POST" name="comentario2">
+				<table width=80% align="center">
+					<?php 
+						 echo "<tr><td align='center'><h3>".$tema."</h3></td></tr>
+					<tr><td><hr></td></tr>
+					<tr><td>".$contenidotema."</td></tr>				
+					<tr><td><hr></td></tr>";
+					 ?>
+					<tr><td><i>Añade un nuevo comentario</i></td></tr>
+					<tr><td><input type="hidden" name="iddecomentario" value="<?php echo $iddecomentario; ?>"></td></tr>
+					<tr><td><input type="hidden" name="idtema" value="<?php echo $_GET['ncomentario']; ?>"></td></tr>
+					<tr><td><textarea name="contenido" id="contenido" cols="70" rows="3" placeholder="Presiona para insertar tu texto o contenido"><?php echo $contenido; ?></textarea></td></tr>
+					<tr><td align="center"><input type="submit" value="Comentar"></td></tr>
+				</table>
+			</form>
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    		<!-- Include all compiled plugins (below), or include individual files as needed -->
+   		    <script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
 <form action="">
